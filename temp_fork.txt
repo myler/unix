@@ -1,0 +1,5 @@
+a write test to stdout.
+before fork
+pid = 20445, glob = 2, autoval = 3
+before fork
+pid = 20444, glob = 1, autoval = 2
