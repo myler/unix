@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1408502514 source:/home/myl/Workspace/unix/testcodeblocks/main.c
+	<stdio.h>
+	<stdlib.h>
+	"apue.h"
+
