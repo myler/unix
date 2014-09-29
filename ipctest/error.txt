@@ -1,0 +1,2 @@
+ipc
+arm-linux-gcc config.o decoder.o encoder.o huffman.o ipc_main.o listsOperator.o logger.o marker.o md.o parser.o plz.o protocol.o quant.o receiver.o rtv.o rtv_send.o rtv_utils.o sem.o serial_ctrl.o sm_fileOption.o sm_routine.o tcputils.o timer_handler.o usb_monitor.o vs_package.o vs_save.o vs_sd.o vs_socket.o vs_thread.o vs_timer.o vs_xml.o vs_xml_parser_new.o watchdog.o webcgi.o wrbmp.o -L../lib -L../lib/arm/expat/lib -L../lib/arm/jpeg/lib -static -lpthread -lexpatw -ljpeg   -o ipc 

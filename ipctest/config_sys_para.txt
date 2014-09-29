@@ -1,0 +1,216 @@
+[login]                                         // web登录
+
+  pgh = 0
+[user]                                          //用户信息  
+
+  user_num = 4
+  username_0 = "admin"                          // username_0系统管理员
+
+  password_0 = "123456"
+  username_1 = "RTU"                            // username_1 RTU用户					
+
+  password_1 = "RTU"
+  username_2 = "rtv1"                           // username_2 普通用户
+
+  password_2 = "123"
+  username_3 = "rtv2"                           // username_3 普通用户
+
+  password_3 = "123"
+[video]                                         //视频参数
+
+  rtv_num = 2                                   //暂定只有2路视频
+
+  solution_x_1 = 640
+  solution_y_1 = 480
+  bright_1 = 100                                //亮度 : 0~255
+  contrast_1 = 100                              //对比度: 0~255
+  frame_interval_1 = 0							//传输帧间隔数,0为无间隔
+  
+  speed_1 = 0                                   //帧率
+  cache_time_1 = 5                              //视频图片预缓存时间长度
+
+  solution_x_2 = 640
+  solution_y_2 = 480
+  bright_2 = 100
+  contrast_2 = 100
+  frame_interval_2 = 0
+  
+  speed_2 = 0
+  cache_time_2 = 10
+[network]                                       //网络参数
+
+  ip_addr = "192.194.1.189"
+  ip_mask = "255.255.255.0"
+  ip_gateway = "192.194.1.1"
+  dns = "192.194.1.1"
+  mac_addr = "00-c0-fa-00-fc-a3"
+  web_port = 80                                 //web服务器访问端口
+
+  socket_port = 3000                            //socket命令端口
+
+  rtv_port = 3001                               //视频传送端口
+
+  alarm_remote_addr = "192.168.0.101"           //远程地址，用于IPC主动发送告警
+
+  alarm_remote_port = 2459                      //远程端口
+
+[alert]                                         //报警参数	
+
+  alert_num = 2                                 //2路报警
+
+  capture_pic_enable_1 = 0                      //启用抓拍图片
+
+  capture_pic_num_1 = 10                        //图片抓拍数目
+
+  capture_pic_interval_1 = 5                    //图片抓拍间隔, 后续删除
+
+  capture_video_enable_1 = 0                    //启用录像
+
+  capture_video_last_time_1 = 30                //录像持续时间
+
+  alarm_enable_1 = 1                            //启用警铃
+
+  alarm_delay_1 = 3                             //警铃延迟时间
+
+  alarm_last_time_1 = 30                        //警铃持续时间
+
+  md_enable_1 = 1                               //启用移动侦测
+
+  md_sensitivity_1 = 30                         //侦测敏感度（30%）
+
+  md_area_0_1 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_1_1 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_2_1 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_3_1 = "0,10,30,40"                    //侦测区域（矩形）
+
+  week_alert_plan_1 = "101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001"
+  plan_cap_enalbe_1 = 0                         // 布防时间到时，是否启动录像
+
+  plan_cap_last_sec_1 = 10                      // 录像持续秒数，0代表录像时间持续到下一个整点
+
+  capture_pic_enable_2 = 1                      //启用抓拍图片
+
+  capture_pic_num_2 = 10                        //图片抓拍数目
+
+  capture_pic_interval_2 = 5                    //图片抓拍间隔
+
+  capture_video_enable_2 = 1                    //启用录像
+
+  capture_video_last_time_2 = 30                //录像持续时间
+
+  alarm_enable_2 = 0                            //启用警铃
+
+  alarm_delay_2 = 3                             //警铃延迟时间
+
+  alarm_last_time_2 = 30                        //警铃持续时间
+
+  md_enable_2 = 1                               //启用移动侦测
+
+  md_sensitivity_2 = 30                         //侦测敏感度（30%）
+
+  md_area_0_2 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_1_2 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_2_2 = "0,10,30,40"                    //侦测区域（矩形）
+
+  md_area_3_2 = "0,10,30,40"                    //侦测区域（矩形）
+
+  week_alert_plan_2 = "101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001101000110100011010001"
+  plan_cap_enalbe_2 = 1                         // 布防时间到时，是否启动录像
+
+  plan_cap_last_sec_2 = 10                      // 录像持续秒数，0代表录像时间持续到下一个整点
+
+[store]                                         //存储参数	
+
+  sd_status = 0                                 //状态，0：未插入，1：已插入
+
+  sd_total_size = 61                            //SD卡总容量
+
+  sd_used_size = 22                             //SD卡已使用容量，两个参数在此无意义，主要是封装在一个结构体内，sd_store_enable
+
+  sd_store_enable = 0                           //启用SD卡存储
+
+  auto_cover_older = 1                          //自动覆盖旧文件
+
+  percent_alarm = 20                            // 执行告警百分比，磁盘剩余空间百分比<=percent_alarm,则进行告警瞤ercent_del
+
+  percent_del = 5                              // 执行删除百分比，磁盘剩余空间百分比<=percent_del,则进行删除操譻ys
+
+[sys]                                           //系统设置	                        	
+app_version = "V3.2.19"
+	app_time = "2014-05-05 21:59:46+08:00"
+[rtv_start]                                     // 实时视频传输请求
+
+  channel = 2                                   // 视频信道 0, 1
+
+[htv_start]                                     // 录像启动请求
+
+  channel = 0                                   // 视频信道 0, 1	
+
+[htv_end]                                       // 录像停止请求
+
+  channel = 0                                   // 视频信道 0, 1
+
+[pic_start]                                     // 图片抓拍启动请求
+
+  channel = 0                                   // 视频信道 0, 1
+
+  num = 5                                       // 抓拍张数
+
+[ptz_control]                                   // 云台控制请求
+
+  channel = 0                                   // 视频信道 0, 1
+
+  left = 0                                      // 向左转动  0：无操作 1：操作
+
+  right = 0                                     // 向右转动  0：无操作 1：操作
+
+  up = 0                                        // 向上转动  0：无操作 1：操作
+
+  down = 0                                      // 向下转动  0：无操作 1：操作
+
+[sys_quit]                                      // IPC退出请求
+
+  flag = 0                                      // 0：IPC不退出，1：IPC退出
+
+[log]                                           // 日志获取
+
+  flag = 1                                      // 0: 不获取日志, 1:获取日志
+
+[usb_remove]
+  channel = 1
+[hb]                                            // 心跳
+
+  flag = 1
+[def_config]                                    // 恢复出厂配置
+
+  flag = 1
+[md_report]
+  md_area_0_0 = 0                               // 0路视频第0号区域是否有移动 0：没有 1：有
+
+  md_area_0_1 = 0
+  md_area_0_2 = 0
+  md_area_0_3 = 0
+  md_area_1_0 = 0
+  md_area_1_1 = 0
+  md_area_1_2 = 0
+  md_area_1_3 = 0
+[alarm_disk]                                    // 参数都由存储参数全局变量提供
+
+  flag = 1
+[time_syn]                                      // 时间同步
+
+  time = "2008-10-12 13:14:34"                  // 更新系统的日期，格式如下: 2008-10-12 13:14:34
+
+[alarm_error]                                    // IPC向RTU上报严重错误消息，如录像保存时的open失败
+
+  alarm_error_id = 1														// 告警错误id
+  alarm_error_name = "file open failed"
+
+[end]
+  flag = 1                                      // 结束标记
+
